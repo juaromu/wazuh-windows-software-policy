@@ -56,6 +56,16 @@ Sysinternals:
 
 <span style="text-decoration:underline;">NOTE:</span> The colon at the end of each line is necessary.
 
+Add the new list in ossec.conf (manager), under the "rulset" section:
+
+```
+ <ruleset>
+     <!-- User-defined ruleset -->
+    <list>etc/lists/software-vendors</list>
+ </ruleset
+ 
+```
+    
 Create detection rule to detect processes started where the field “win.eventdata.company” is NOT included in that list
 (You can also add it at the bottom of this [rule](https://github.com/juaromu/wazuh/blob/main/MITRE_TECHNIQUES_FROM_SYSMON_EVENT1.xml) file):
 
