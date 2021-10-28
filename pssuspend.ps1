@@ -49,7 +49,7 @@ switch -Exact ($switch_condition){
 # Suspend Process, sleep and then kill it.
         c:\"Program Files"\Sysinternals\pssuspend64.exe /nobanner /accepteula $process_id_alert
         Start-Sleep -s 3
-        c:\"Program Files"\Sysinternals\pskill.exe $process_id_alert
+        c:\"Program Files"\Sysinternals\pskill64.exe /accepteula $process_id_alert
        }
     break;
     }   
